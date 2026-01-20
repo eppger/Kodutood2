@@ -1,5 +1,6 @@
 import './App.css';
-import { Link, Routes } from'react-router-dom';
+import {Link, Route, Routes} from'react-router-dom'
+
 import Avaleht from './pages/Avaleht';
 import Uudised from './pages/Uudised';
 import Kontakt from './pages/Kontakt';
