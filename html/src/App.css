@@ -76,28 +76,34 @@ body {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-  background-color: #ffffff;
 }
 
 .data-table th {
-  background-color: #ffffff;
+  background-color: white;
   text-align: left;
   padding: 12px;
   font-weight: bold;
-  border: 2px solid #ddd;
+  border: 2px solid #b7b5b5;
 }
 
 .data-table td {
   padding: 12px;
-  border: 1px solid #d7d6d6;
+  border: 2px solid #b7b5b5;
 }
 
+/* Paaritud read (1, 3, 5) - hall taust */
+.data-table tbody tr:nth-child(odd) {
+  background-color: #e8e8e8;
+}
+
+/* Paarisread (2, 4, 6) - valge taust */
 .data-table tbody tr:nth-child(even) {
-  background-color: #eeecec;
+  background-color: white;
 }
 
+/* Hover efekt */
 .data-table tbody tr:hover {
-  background-color: #d7d7d6;
+  background-color: #d0d0d0;
 }
 
 /* Youtube video */
