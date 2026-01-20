@@ -1,42 +1,111 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
+}
+
+
+/* Roheline nupp */
+.green-button {
+  background-color: rgb(16, 65, 16);
+  color: lightgray;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.green-button:hover {
+  height: 100px;
+}
+
+.green-button:active {
+  cursor: grab;
+}
+
+/* Sinine tekst */
+.blue-text {
+   text-align: center;
+  color: blue;
+  font-style: italic;
+}
+
+.blue-text:hover {
+  font-size: 24px;
+}
+
+/* Roheline tekst */
+.green-text {
   text-align: center;
+  color: green;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 3px solid red;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.green-text:hover {
+  border-color: brown;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Pilt */
+.rounded-image {
+  width: 300px;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.rounded-image:hover {
+  border-radius: 20px;
+  opacity: 0.5;
 }
 
-.card {
-  padding: 2em;
+body {
+  background-color: beige;
+  color: #222;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
-.read-the-docs {
-  color: #888;
+/* Tabel */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ffffff;
+}
+
+.data-table th {
+  background-color: #ffffff;
+  text-align: left;
+  padding: 12px;
+  font-weight: bold;
+  border: 2px solid #ddd;
+}
+
+.data-table td {
+  padding: 12px;
+  border: 1px solid #d7d6d6;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: #eeecec;
+}
+
+.data-table tbody tr:hover {
+  background-color: #d7d7d6;
+}
+
+/* Youtube video */
+.video-container {
+  margin: 20px 0;
+}
+
+.video-container iframe {
+  max-width: 100%;
+  border-radius: 8px;
 }
