@@ -37,7 +37,7 @@ const logiSisse = () => {
   }
 
 // Ei sislada protsenti on false
-  if (paroolRef.current.value.icludes("%") === false) {	
+  if (paroolRef.current.value.includes("%") === false) {	
   toast.error("Peab sisaladama protsenti");
    return;
   }
@@ -61,50 +61,38 @@ const logiSisse = () => {
 
   return (
     <div className="App">
-      <div>{sonum}</div>
-      {sisselogitud === "ei" && <div>
-      <label>Kasutajanimi</label><br />
-      <input ref={kasutajaNimiRef} type="text" /><br />
-      <label>Parool</label><br />
-      <input ref={paroolRef}  type="password" /><br />
-      </div> }
+      {/* Menüü peaks olema kõige üleval */}
+      <Menu />
 
-      { sisselogitud === "ei" && <button onClick={logiSisse} >Logi sisse</button>}
-      { sisselogitud === "jah" &&<button onClick={logiValja} >Logi välja</button>}
-<br /><br />
+      {/* Sisu konteiner, mis jääb menüü alla */}
+      <div className="content">
+        <div>{sonum}</div>
+        {sisselogitud === "ei" && <div>
+        <label>Kasutajanimi</label><br />
+        <input ref={kasutajaNimiRef} type="text" /><br />
+        <label>Parool</label><br />
+        <input ref={paroolRef}  type="password" /><br />
+        </div> }
 
-      <Link to="/">
-        <button>Avalehele</button>
-      </Link>
-      <Link to="/uudised">
-        <button>Uudiste lehele</button>
-      </Link>
-      <Link to="/meist">
-        <button>Info meist</button>
-      </Link>
-      <Link to="/kontakt">
-        <button>Võta meiega ühendust</button>
-      </Link>
-      <Link to="/seaded">
-        <button>Seaded</button>
-      </Link>
+        { sisselogitud === "ei" && <button onClick={logiSisse} >Logi sisse</button>}
+        { sisselogitud === "jah" &&<button onClick={logiValja} >Logi välja</button>}
+        <br /><br />
 
- <Menu></Menu>
-     {/* Routes üles käib MENÜÜ */}
-     
-     <Routes>
-      <Route path='' element={ <Avaleht/>} />
-      <Route path='uudised' element={ <Uudised/>} />
-      <Route path='meist' element={ <Meist/>} />
-      <Route path='kontakt' element={ <Kontakt/>} />
-      <Route path='seaded' element={ <Seaded/>} />
-     </Routes>
 
- <ToastContainer
-  position="bottom-right"
-  autoClose={4000}
-  theme="dark"
-/>
+        <Routes>
+          <Route path='' element={ <Avaleht/>} />
+          <Route path='uudised' element={ <Uudised/>} />
+          <Route path='meist' element={ <Meist/>} />
+          <Route path='kontakt' element={ <Kontakt/>} />
+          <Route path='seaded' element={ <Seaded/>} />
+        </Routes>
+      </div>
+
+      <ToastContainer
+        position="bottom-right"
+        autoClose={4000}
+        theme="dark"
+      />
     </div>
   );
 }

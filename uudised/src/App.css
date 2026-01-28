@@ -24,3 +24,19 @@
 .valitud {
   font-weight: bold;
 }
+
+/* Menüü fikseeritud üles */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+}
+
+/* Sisu konteiner, mis jääb menüü alla */
+.content {
+  margin-top: 50px; /* Kohanda seda vastavalt menüü kõrgusele */
+  padding: 20px;
+}
