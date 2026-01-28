@@ -5,10 +5,14 @@ import Uudised from './pages/Uudised';
 import Kontakt from './pages/Kontakt';
 import Meist from './pages/Meist';
 import Seaded from './pages/Seaded';
+import Months from './pages/Valikud/Months';
+import Animals from './pages/Valikud/Animals';
+import Words from './pages/Valikud/Words';
 import {useState} from 'react';
 import {useRef} from 'react';
 import Menu from './components/Menu'
 import { ToastContainer, toast } from 'react-toastify';
+import Valikud from './pages/Valikud/Valik';
 
 
 function App() {
@@ -85,6 +89,11 @@ const logiSisse = () => {
           <Route path='meist' element={ <Meist/>} />
           <Route path='kontakt' element={ <Kontakt/>} />
           <Route path='seaded' element={ <Seaded/>} />
+          <Route path='valikud' element={ <Valikud/>} />
+          <Route path='months' element={ <Months/>} />
+          <Route path='animals' element={ <Animals/>} />
+          <Route path='words' element={ <Words/>} />
+
         </Routes>
       </div>
 
