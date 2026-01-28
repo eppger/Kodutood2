@@ -1,13 +1,21 @@
 import { useState } from "react";
 
 function Meist() {
-  const [kontakt, n2itaKontakt] = useState(""); 
-   
+  const [kontakt, n2itaKontakt] = useState("");
+  const [message, määraMessage] = useState("Vali mõni tegevus");
+    
    return ( <div>
     <br />
-    <div>See on meist leht, nähtav localhost:3000 aadressil</div>
-    <br />
-    <img src="https://www.theperfectloaf.com/wp-content/uploads/2020/01/theperfectloaf-a-simple-workweek-sourdough-bread-recipe-2-1080x720.jpg" alt="The Perfect Loaf"/>
+    <img src="https://www.theperfectloaf.com/wp-content/uploads/2020/01/theperfectloaf-a-simple-workweek-sourdough-bread-recipe-2-1080x720.jpg" alt="The Perfect Loaf" className="rounded-image"/>
+<br /><br />
+<div>
+<div>{ message }</div>
+<br />
+<button onClick={() => määraMessage("Selleks saada meile e-mail jobs@html-css.com")}>Kandideeri tööle</button>
+<button onClick={() => määraMessage("Meil on 10 töötajat, kelle info ilmub veebilehele lähiajal")}>Vaata meie töötajaid</button>
+<button onClick={() => määraMessage("Ühenduse võtmiseks mine lehele Kontakt")}>Võta meiega ühendust</button>
+</div>
+
 <br />
 <br />
 
