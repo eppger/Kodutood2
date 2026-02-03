@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import './App.css'
 
 function App() {
@@ -6,6 +6,7 @@ function App() {
 return (
     <>
       <button className="green-button">Roheline nupp</button>
+    
       
       <p className="blue-text">Sinine tekst</p>
       
