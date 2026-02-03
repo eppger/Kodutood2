@@ -16,11 +16,17 @@ function Menu() {
         <Link to="/meist">
           <button>Info meist</button>
         </Link>
+
         <Link to="/kontakt">
           <button>Võta meiega ühendust</button>
         </Link>
+
         <Link to="/seaded">
           <button>Seaded</button>
+        </Link>
+        
+        <Link to="/logimine">
+          <button>Logimine</button>
         </Link>
         
     </div>

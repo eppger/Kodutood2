@@ -1,18 +1,25 @@
 import './App.css';
 import {Link, Route, Routes} from 'react-router-dom'
+
+import Menu from './components/Menu'
 import Avaleht from './pages/Avaleht';
 import Uudised from './pages/Uudised';
 import Kontakt from './pages/Kontakt';
 import Meist from './pages/Meist';
 import Seaded from './pages/Seaded';
+
+import Valikud from './pages/Valikud/Valik';
 import Months from './pages/Valikud/Months';
 import Animals from './pages/Valikud/Animals';
 import Words from './pages/Valikud/Words';
+
+
 import {useState} from 'react';
 import {useRef} from 'react';
-import Menu from './components/Menu'
+
 import { ToastContainer, toast } from 'react-toastify';
-import Valikud from './pages/Valikud/Valik';
+import Logimine from './pages/Logimine';
+
 
 
 function App() {
@@ -65,10 +72,7 @@ const logiSisse = () => {
 
   return (
     <div className="App">
-      {/* Menüü peaks olema kõige üleval */}
-      <Menu />
-
-      {/* Sisu konteiner, mis jääb menüü alla */}
+  
       <div className="content">
         <div>{sonum}</div>
         {sisselogitud === "ei" && <div>
@@ -83,12 +87,14 @@ const logiSisse = () => {
         <br /><br />
 
 
+      <Menu></Menu>
         <Routes>
           <Route path='' element={ <Avaleht/>} />
           <Route path='uudised' element={ <Uudised/>} />
           <Route path='meist' element={ <Meist/>} />
           <Route path='kontakt' element={ <Kontakt/>} />
           <Route path='seaded' element={ <Seaded/>} />
+          <Route path='logimine' element={ <Logimine/>} />
           <Route path='valikud' element={ <Valikud/>} />
           <Route path='months' element={ <Months/>} />
           <Route path='animals' element={ <Animals/>} />
@@ -100,8 +106,7 @@ const logiSisse = () => {
       <ToastContainer
         position="bottom-right"
         autoClose={4000}
-        theme="dark"
-      />
+        theme="dark"/>
     </div>
   );
 }
