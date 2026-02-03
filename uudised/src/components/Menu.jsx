@@ -9,8 +9,17 @@ function Menu() {
         <Link to="/uudised">
           <button>Uudiste lehele</button>
         </Link>
+
         <Link to="/valikud">
           <button>Valik</button>
+        </Link>
+
+        <Link to="/books">
+          <button>Books</button>
+        </Link>
+
+        <Link to="/numbrid">
+          <button>Numbrid</button>
         </Link>
 
         <Link to="/meist">

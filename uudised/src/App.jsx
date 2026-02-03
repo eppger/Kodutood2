@@ -19,6 +19,8 @@ import {useRef} from 'react';
 
 import { ToastContainer, toast } from 'react-toastify';
 import Logimine from './pages/Logimine';
+import Books from './pages/Books';
+import Numbrid from './pages/Numbrid';
 
 
 
@@ -72,7 +74,7 @@ const logiSisse = () => {
 
   return (
     <div className="App">
-  
+  <br />
       <div className="content">
         <div>{sonum}</div>
         {sisselogitud === "ei" && <div>
@@ -91,6 +93,8 @@ const logiSisse = () => {
         <Routes>
           <Route path='' element={ <Avaleht/>} />
           <Route path='uudised' element={ <Uudised/>} />
+          <Route path='books' element={ <Books/>} />
+          <Route path='numbrid' element={ <Numbrid/>} />
           <Route path='meist' element={ <Meist/>} />
           <Route path='kontakt' element={ <Kontakt/>} />
           <Route path='seaded' element={ <Seaded/>} />
