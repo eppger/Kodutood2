@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import joogidFailist from "../joogid.json";
 
 function Avaleht() {
@@ -15,9 +16,11 @@ function Avaleht() {
     <div>
       <h3>Joogid</h3>
       {joogid.map((element, index) => (
-        <div key={index}>
-          <span>{element}</span>
-        </div>
+        <Link to={"/jook/" + index} key={index}>
+          <div>
+            <span>{element}</span>
+          </div>
+        </Link>
       ))}
       <br />
       <label>Lisa uus jook:</label>
