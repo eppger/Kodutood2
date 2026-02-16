@@ -4,12 +4,16 @@ import LisaArvuti from './pages/LisaArvuti';
 import VaataArvuteid from './pages/VaataArvuteid';
 import Ostukorv from './pages/Ostukorv';
 import './App.css';
+import Tooted from './pages/Tooted';
 
 function App() {
   return (
     <div>
       <Link to="/">
         <button>Avalehele</button>
+      </Link>
+      <Link to="/products">
+        <button>Tooted</button>
       </Link>
       <Link to="/all">
         <button>Vaata sülearvuteid</button>
@@ -23,6 +27,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Avaleht />} />
+        <Route path='products' element={<Tooted />} />
         <Route path="/all" element={<VaataArvuteid />} />
         <Route path="/add" element={<LisaArvuti />} />
         <Route path="/cart" element={<Ostukorv />} />
