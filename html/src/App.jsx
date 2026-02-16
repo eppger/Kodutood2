@@ -6,10 +6,7 @@ function App() {
 return (
     <>
       <button className="green-button">Roheline nupp</button>
-    
-      
       <p className="blue-text">Sinine tekst</p>
-      
       <p className="green-text">Roheline tekst</p>
       
       <div style={{overflow: 'auto'}}>

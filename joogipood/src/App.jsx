@@ -27,7 +27,7 @@ function App() {
         <Route path="/" element={<Avaleht/>} />
         <Route path="/lisa" element={<LisaJook/>} />
         <Route path="/halda" element={<HaldaJooke />} />
-        <Route path="/jook/:number" element={<Jook />} />
+        <Route path="/jook/:number" element={<Jook />} /> 
       </Routes>
 
       </div>

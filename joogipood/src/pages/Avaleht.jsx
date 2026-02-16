@@ -15,10 +15,12 @@ function Avaleht() {
   return (
     <div>
       <h3>Joogid</h3>
+    
       {joogid.map((element, index) => (
         <Link to={"/jook/" + index} key={index}>
           <div>
             <span>{element}</span>
+            
           </div>
         </Link>
       ))}
