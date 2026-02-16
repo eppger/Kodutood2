@@ -7,6 +7,7 @@ import Uudised from './pages/Uudised';
 import Kontakt from './pages/Kontakt';
 import Meist from './pages/Meist';
 import Seaded from './pages/Seaded';
+import LisaUudis from './pages/LisaUudis';
 
 import Valikud from './pages/Valikud/Valik';
 import Months from './pages/Valikud/Months';
@@ -21,6 +22,11 @@ import { ToastContainer, toast } from 'react-toastify';
 import Logimine from './pages/Logimine';
 import Books from './pages/Books';
 import Numbrid from './pages/Numbrid';
+import HaldaUudiseid from './pages/HaldaUudiseid';
+import YksUudis from './pages/YksUudis';
+import MuudaUudis from './pages/MuudaUudis';
+import KasutajaPostitus from './pages/KasutajaPostitus';
+import YksPostitus from './pages/YksPostitus';
 
 
 
@@ -93,12 +99,18 @@ const logiSisse = () => {
         <Routes>
           <Route path='' element={ <Avaleht/>} />
           <Route path='uudised' element={ <Uudised/>} />
+          <Route path='lisa-uudis' element={ <LisaUudis/>} />
+          <Route path='vaata-postitus/:postitusId' element={<YksPostitus />} />
+          <Route path='halda' element={ <HaldaUudiseid/>} />
+          <Route path='uudis/:index' element={<YksUudis />} />
+          <Route path='muuda/:index' element={<MuudaUudis />} />
           <Route path='books' element={ <Books/>} />
           <Route path='numbrid' element={ <Numbrid/>} />
           <Route path='meist' element={ <Meist/>} />
           <Route path='kontakt' element={ <Kontakt/>} />
           <Route path='seaded' element={ <Seaded/>} />
           <Route path='logimine' element={ <Logimine/>} />
+          <Route path='kasutaja-postitus/:kasutajaId' element={<KasutajaPostitus />} />
           <Route path='valikud' element={ <Valikud/>} />
           <Route path='months' element={ <Months/>} />
           <Route path='animals' element={ <Animals/>} />

@@ -33,6 +33,13 @@ function Menu() {
         <Link to="/seaded">
           <button>Seaded</button>
         </Link>
+        <Link to="/lisa-uudis">
+          <button>Lisa uudis</button>
+        </Link>
+
+        <Link to="/halda">
+          <button>Halda uudiseid</button>
+        </Link>
         
         <Link to="/logimine">
           <button>Logimine</button>

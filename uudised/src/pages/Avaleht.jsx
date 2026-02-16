@@ -1,10 +1,35 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Avaleht() {
-   return ( <div>
-   
-    <img src="https://www.theperfectloaf.com/wp-content/uploads/2015/12/theperfectloaf-mybestsourdoughrecipe-title-1-1000x800.jpg" alt="The Perfect Loaf" className="rounded-image"/>
+  const [postitused, uuendaPostitused] = useState([]);
 
-</div> );
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then(res => res.json())
+      .then(data => uuendaPostitused(data))
+  }, []);
+
+  return (
+    <div>
+      <div>See on avaleht, nähtav localhost:3000 aadressil</div>
+      <img src="https://hative.com/wp-content/uploads/2013/08/bark-news-media-logo.png" alt="logo" />
+      {postitused.map(element =>
+        <div key={element.id}>
+          <div><i>{element.userId}</i></div>
+          <div><u>{element.id}</u></div>
+          <div><b>{element.title}</b></div>
+          <div>{element.body}</div>
+          <Link to={"/kasutaja-postitus/" + element.userId}>
+            <button>Kõik kasutaja postitused</button>
+          </Link>
+          <Link to={"/vaata-postitus/" + element.id}>
+            <button>Vaata postitust</button>
+          </Link>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default Avaleht;
